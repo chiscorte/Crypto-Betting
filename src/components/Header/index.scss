@@ -1,0 +1,59 @@
+.header {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 6px 11px 36px -4px rgba(14, 19, 55, 0.26);
+  backdrop-filter: blur(15px);
+
+  .title {
+    // font-family: "Alegreya Sans SC";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 41px;
+    /* identical to box height */
+
+    text-align: center;
+    color: white;
+  }
+
+  .search-box {
+    padding: 15px 0px 15px 20px;
+    border-radius: 100vw;
+    background: rgba(255, 255, 255, 0.09);
+    color: white;
+
+    .input-field {
+      background-color: transparent;
+    }
+    .input-field:focus-visible {
+      outline: none;
+    }
+  }
+
+  .signin-btn,
+  .signup-btn {
+    padding: 12px 25px;
+
+    // font-family: "Urbanist";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+  }
+  .signin-btn {
+    background: rgba(5, 7, 30, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    border-radius: 100vw;
+    color: white;
+  }
+  .signup-btn {
+    background: #2960ec;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 100vw;
+    color: white;
+  }
+}

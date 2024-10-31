@@ -1,0 +1,492 @@
+.player-seat {
+  .fourth-player {
+    position: absolute;
+    top: -4vw;
+    left: -2vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        margin-left: -9.3vw;
+        top: -4.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: 10vw;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+  }
+
+  .fifth-player {
+    position: absolute;
+    top: 3vw;
+    left: 30vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        /* margin-left: -0.2vw; */
+        top: -10.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: 10vw;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+  }
+
+  .sixth-player {
+    position: absolute;
+    top: 21vw;
+    left: 34vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        top: 2.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: 10vw;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+  }
+
+  .first-player {
+    position: absolute;
+    top: 29vw;
+    left: -3vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $my-card-top;
+      width: $my_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $my_card_top;
+      width: $my_card_size;
+      z-index: 3;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        top: 2.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: 10vw;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+  }
+
+  .second-player {
+    position: absolute;
+    top: 21vw;
+    left: -39vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        top: 2.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: 10vw;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+  }
+
+  .third-player {
+    position: absolute;
+    top: 3vw;
+    left: -35vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        top: -10.5vw;
+        /* margin-left: -9.2vw; */
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: 10vw;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+  }
+}

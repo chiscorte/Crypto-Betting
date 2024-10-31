@@ -1,0 +1,1449 @@
+$others_card_size: 5.8vw;
+$board_card_size: 6.7vw;
+$my_card_size: 6.9vw;
+$two-pair-font-size: 1.3vw;
+$two-pair-pos-left: -1.4vw;
+$two-pair-pos-top: -2.5vw;
+$coin-roll-left: -1.5vw;
+$coin-roll-top: -0.1vw;
+$coin-roll-size: 1.2vw;
+$coin-amount-left: 0.1vw;
+$coin-amount-top: -0.3vw;
+$coin-amount-size: 1.3vw;
+$my-card-top: 1.3vw;
+$other-card-top: 4.3vw;
+$other-card-left: 47.9vw;
+$other-card-right: -37.1vw;
+$bottom-btn-group-pos-top: 44vw;
+
+$first-coin-amount-border-left: 37.6vw;
+$first-coin-amount-border-top: 39.8vw;
+
+$second-coin-amount-border-left: 56.6vw;
+$second-coin-amount-border-top: 11.8vw;
+
+$third-coin-amount-border-left: 47.6vw;
+$third-coin-amount-border-top: 16.8vw;
+
+$fourth-coin-amount-border-left: 47.6vw;
+$fourth-coin-amount-border-top: 16.8vw;
+
+$fifth-coin-amount-border-left: 47.6vw;
+$fifth-coin-amount-border-top: 16.8vw;
+
+$sixth-coin-amount-border-left: 38vw;
+$sixth-coin-amount-border-top: 11.8vw;
+
+$player-name-width: 17vw;
+$player-name-margin-left: -3.2vw;
+
+$short-action-badge-height: 5vw;
+$action-badge-height: 8vw;
+
+.play {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  background-size: 100%;
+  overflow: hidden;
+
+  .selected {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0px 0px 32px #f8d;
+  }
+
+  .notallowed {
+    opacity: 0.7;
+  }
+
+  .reset-btn {
+    color: white;
+    background: blue;
+  }
+
+  .img-board {
+    position: absolute;
+    width: 91vw;
+    margin-top: 6vw;
+  }
+  .lobby-img {
+    position: absolute;
+    top: 1.5vw;
+    left: 0.1vw;
+    width: 8.8vw;
+  }
+  .lobby-img:hover {
+    cursor: pointer;
+  }
+
+  
+
+  .first-player,
+  .second-player,
+  .third-player,
+  .fourth-player,
+  .fifth-player,
+  .sixth-player {
+    .bet-amount {
+      background-color: rgba(100, 100, 100, 0.4);
+      padding: 0 1vw;
+      border-radius: 100vw;
+    }
+    .progress-percent {
+      position: absolute;
+      z-index: 10;
+      left: 0.8vw;
+      top: 4.5vw;
+      color: white;
+    }
+    .progress-circle {
+      position: absolute;
+      top: 5vw;
+      left: 3vw;
+    }
+    .progress-badge {
+      color: white;
+      position: absolute;
+      top: 4.3vw;
+      left: 1vw;
+    }
+    .action-badge {
+      position: relative;
+      z-index: 9;
+      left: 42vw;
+      top: 11vw;
+      width: 11vw;
+      text-align: center;
+      border-radius: 1vw;
+      background-image: radial-gradient(
+        farthest-corner at 40px 40px,
+        #0c101a 0%,
+        #0c101a 13%,
+        #0c101a 32%,
+        #0c115e 100%
+      );
+      // background-color: #2f2f2f;
+      box-shadow: 0vw 0vw 1vw 0.21vw;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+
+      .action-text {
+        position: relative;
+        z-index: 100;
+        /* top: 4.3vw; */
+        padding-bottom: 0.5vw;
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: #6ed;
+        text-transform: uppercase;
+
+        animation-name: drop-from-top;
+        animation-duration: 1.3s;
+        animation-iteration-count: 1;
+      }
+    }
+  }
+  .third-player,
+  .fifth-player,
+  .second-player {
+    .action-badge {
+      top: 13vw;
+    }
+  }
+  .fifth-player,
+  .third-player,
+  .fourth-player {
+    .progress-percent {
+      position: absolute;
+      z-index: 10;
+      left: 0.8vw;
+      top: 2.5vw;
+      color: white;
+    }
+    .progress-badge {
+      color: white;
+      position: absolute;
+      top: 2.5vw;
+      left: 1vw;
+    }
+    .progress-circle {
+      position: absolute;
+      top: 3vw;
+      left: 3vw;
+    }
+  }
+
+  .third-player,
+  .fourth-player,
+  .fifth-player {
+    height: $short-action-badge-height;
+    animation-name: open-from-top-short;
+  }
+
+  .first-player,
+  .second-player,
+  .sixth-player {
+    height: $action-badge-height;
+    animation-name: open-from-top-long;
+  }
+
+  .fourth-player {
+    position: absolute;
+    top: -4vw;
+    left: -2vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .bet-amount {
+      position: absolute;
+      left: 9vw;
+      top: 7vw;
+      color: white;
+    }
+
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        margin-left: $player-name-margin-left;
+        // right: 14.5vw;
+        top: -4.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: $player-name-width;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+    .anim-circle-1,
+    .anim-circle-2,
+    .anim-circle-3 {
+      visibility: hidden;
+      position: absolute;
+      left: 43vw;
+      top: 8vw;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 100vw;
+      background-color: white;
+      animation-name: anim-circle-keyframes;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .anim-circle-2 {
+      animation-delay: 0.3s;
+    }
+    .anim-circle-3 {
+      animation-delay: 0.6s;
+    }
+    .action-badge {
+      .action-text {
+        padding-top: 2vw;
+      }
+    }
+    .winner-badge {
+      position: absolute;
+      z-index: 100;
+      left: 53.5vw;
+      top: 11vw;
+    }
+    .action-board {
+      position: absolute;
+      width: 13vw;
+      height: 8vw;
+      left: 41.2vw;
+      top: 13vw;
+      border-radius: 1vw;
+      background-image: radial-gradient(
+        farthest-corner at 40px 40px,
+        #0c101a 0%,
+        #0c101a 13%,
+        #0c101a 32%,
+        #0c115e 100%
+      );
+      // background-color: #2f2f2f;
+      box-shadow: 0vw 0vw 1vw 0.21vw;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+  }
+
+  .fifth-player {
+    position: absolute;
+    top: 3vw;
+    left: 30vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+
+    .bet-amount {
+      position: absolute;
+      left: 47vw;
+      top: 0vw;
+      color: white;
+    }
+
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        margin-left: $player-name-margin-left;
+        top: -10.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: $player-name-width;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+    .anim-circle-1,
+    .anim-circle-2,
+    .anim-circle-3 {
+      visibility: hidden;
+      position: absolute;
+      left: 43vw;
+      top: 8vw;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 100vw;
+      background-color: white;
+      animation-name: anim-circle-keyframes;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .anim-circle-2 {
+      animation-delay: 0.3s;
+    }
+    .anim-circle-3 {
+      animation-delay: 0.6s;
+    }
+    .action-badge {
+      height: $short-action-badge-height;
+
+      .action-text {
+        padding-top: 2vw;
+      }
+    }
+    .winner-badge {
+      position: absolute;
+      z-index: 100;
+      left: 31.5vw;
+      top: 11vw;
+    }
+    .action-board {
+      position: absolute;
+      width: 13vw;
+      height: 5vw;
+      left: 41.2vw;
+      top: 13vw;
+      border-radius: 1vw;
+      background-image: radial-gradient(
+        farthest-corner at 40px 40px,
+        #0c101a 0%,
+        #0c101a 13%,
+        #0c101a 32%,
+        #0c115e 100%
+      );
+      // background-color: #2f2f2f;
+      box-shadow: 0vw 0vw 1vw 0.21vw;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+  }
+
+  .sixth-player {
+    position: absolute;
+    top: 21vw;
+    left: 34vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .bet-amount {
+      position: absolute;
+      left: 47vw;
+      top: 2vw;
+      color: white;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        margin-left: $player-name-margin-left;
+        top: 2.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: $player-name-width;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+    .anim-circle-1,
+    .anim-circle-2,
+    .anim-circle-3 {
+      visibility: hidden;
+      position: absolute;
+      left: 43vw;
+      top: 8vw;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 100vw;
+      background-color: white;
+      animation-name: anim-circle-keyframes;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .anim-circle-2 {
+      animation-delay: 0.3s;
+    }
+    .anim-circle-3 {
+      animation-delay: 0.6s;
+    }
+    .action-badge {
+      top: 13vw;
+
+      .action-text {
+        padding-top: 5vw;
+      }
+    }
+    .winner-badge {
+      position: absolute;
+      z-index: 100;
+      left: 31.5vw;
+      top: 11vw;
+    }
+    .action-board {
+      position: absolute;
+      width: 13vw;
+      height: 8vw;
+      left: 41.2vw;
+      top: 13vw;
+      border-radius: 1vw;
+      background-image: radial-gradient(
+        farthest-corner at 40px 40px,
+        #0c101a 0%,
+        #0c101a 13%,
+        #0c101a 32%,
+        #0c115e 100%
+      );
+      // background-color: #2f2f2f;
+      box-shadow: 0vw 0vw 1vw 0.21vw;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+  }
+
+  .first-player {
+    position: absolute;
+    top: 29vw;
+    left: -3vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $my-card-top;
+      width: $my_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $my_card_top;
+      width: $my_card_size;
+      z-index: 3;
+    }
+    .bet-amount {
+      position: absolute;
+      left: 46vw;
+      top: -1vw;
+      color: white;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        margin-left: $player-name-margin-left;
+        top: 2.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: $player-name-width;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+    .winner-badge {
+      position: absolute;
+      z-index: 100;
+      left: 53.5vw;
+      top: 11vw;
+    }
+
+    @keyframes anim-circle-keyframes {
+      0% {
+        visibility: visible;
+        opacity: 0.6;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 0;
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0.6;
+        transform: scale(0.5);
+      }
+    }
+    .anim-circle-1,
+    .anim-circle-2,
+    .anim-circle-3 {
+      visibility: hidden;
+      position: absolute;
+      left: 40vw;
+      top: 8vw;
+      width: 15vw;
+      height: 15vw;
+      border-radius: 100vw;
+      background-color: white;
+      animation-name: anim-circle-keyframes;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .anim-circle-2 {
+      animation-delay: 0.3s;
+    }
+    .anim-circle-3 {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes open-from-top-long {
+      from {
+        height: 2vw;
+      }
+      to {
+        height: $action-badge-height;
+      }
+    }
+    @keyframes open-from-top-short {
+      from {
+        height: 2vw;
+      }
+      to {
+        height: $short-action-badge-height;
+      }
+    }
+    @keyframes drop-from-top {
+      from {
+        opacity: 0;
+        padding-top: 0vw;
+      }
+      to {
+        opacity: 1;
+        padding-top: 5vw;
+      }
+    }
+    .action-badge {
+      top: 13vw;
+
+      .action-text {
+        padding-top: 5vw;
+      }
+    }
+
+    .action-board {
+      position: absolute;
+      width: 13vw;
+      height: 8vw;
+      left: 41.2vw;
+      top: 13vw;
+      border-radius: 1vw;
+      background-image: radial-gradient(
+        farthest-corner at 40px 40px,
+        #0c101a 0%,
+        #0c101a 13%,
+        #0c101a 32%,
+        #0c115e 100%
+      );
+      // background-color: #2f2f2f;
+      box-shadow: 0vw 0vw 1vw 0.21vw;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+  }
+
+  .second-player {
+    position: absolute;
+    top: 21vw;
+    left: -39vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .bet-amount {
+      position: absolute;
+      left: 47vw;
+      top: 3vw;
+      /* font-size: 150px; */
+      color: white;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        margin-left: $player-name-margin-left;
+        top: 2.5vw;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: $player-name-width;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+    .winner-badge {
+      position: absolute;
+      z-index: 100;
+      left: 53.5vw;
+      top: 11vw;
+    }
+    .anim-circle-1,
+    .anim-circle-2,
+    .anim-circle-3 {
+      visibility: hidden;
+      position: absolute;
+      left: 43vw;
+      top: 8vw;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 100vw;
+      background-color: white;
+      animation-name: anim-circle-keyframes;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .anim-circle-2 {
+      animation-delay: 0.3s;
+    }
+    .anim-circle-3 {
+      animation-delay: 0.6s;
+    }
+
+    .action-badge {
+      .action-text {
+        padding-top: 5vw;
+      }
+    }
+
+    .action-board {
+      position: absolute;
+      width: 13vw;
+      height: 8vw;
+      left: 41.2vw;
+      top: 13vw;
+      border-radius: 1vw;
+      background-image: radial-gradient(
+        farthest-corner at 40px 40px,
+        #0c101a 0%,
+        #0c101a 13%,
+        #0c101a 32%,
+        #0c115e 100%
+      );
+      // background-color: #2f2f2f;
+      box-shadow: 0vw 0vw 1vw 0.21vw;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+  }
+
+  .third-player {
+    position: absolute;
+    top: 3vw;
+    left: -35vw;
+    width: 10vw;
+    .img-round {
+      position: absolute;
+      top: 11.29vw;
+      left: 42.8vw;
+      width: 9.4vw;
+      z-index: 2;
+    }
+    .first-card {
+      position: absolute;
+      right: $other-card-right;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .second-card {
+      position: absolute;
+      left: $other-card-left;
+      top: $other-card-top;
+      width: $others_card_size;
+      z-index: 3;
+    }
+    .bet-amount {
+      position: absolute;
+      left: 9vw;
+      top: 7vw;
+      color: white;
+    }
+    .coin-amount-box {
+      z-index: 10;
+      position: absolute;
+      left: 42.6vw;
+      top: 12.3vw;
+      width: 10.2vw;
+      height: 2.3vw;
+      border-radius: 100vw;
+      background-color: white;
+      box-shadow: 0vw 0vw 0.3vw 0.02vw #fff;
+      background: linear-gradient(20deg, #000, #003, #004, #005, #fff);
+      .two-pair {
+        position: relative;
+        /* left: 0.5vw; */
+        top: -10.5vw;
+        margin-left: $player-name-margin-left;
+        font-size: 1.5vw;
+        color: #dd2;
+        color: #fff;
+        color: #56f;
+        color: gray;
+        color: #7f4;
+        width: $player-name-width;
+        text-align: center;
+        text-shadow: 0 0 0.7vw;
+        font-weight: 700;
+      }
+      .coin-roll {
+        position: absolute;
+        left: 0.2vw;
+        top: 0.2vw;
+        padding-top: -5vw;
+        /* margin-top: -0.1vw; */
+        padding-left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+        border-radius: 100vw;
+        background-color: #08f;
+        color: #0f3;
+        font-size: 1.4vw;
+        font-weight: 800;
+      }
+      .coin-amount {
+        position: relative;
+        /* top: -0.4vw; */
+        /* left: 2.1vw; */
+        margin-top: -2.6vw;
+        font-size: 1.9vw;
+        font-weight: 760;
+        color: white;
+        text-align: center;
+        /* padding-left: 3.1vw; */
+      }
+    }
+    .anim-circle-1,
+    .anim-circle-2,
+    .anim-circle-3 {
+      visibility: hidden;
+      position: absolute;
+      left: 43vw;
+      top: 8vw;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 100vw;
+      background-color: white;
+      animation-name: anim-circle-keyframes;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+    .anim-circle-2 {
+      animation-delay: 0.3s;
+    }
+    .anim-circle-3 {
+      animation-delay: 0.6s;
+    }
+    .action-badge {
+      .action-text {
+        padding-top: 2vw;
+      }
+    }
+    .winner-badge {
+      position: absolute;
+      z-index: 100;
+      left: 53.5vw;
+      top: 11vw;
+    }
+    .action-board {
+      position: absolute;
+      width: 13vw;
+      height: 8vw;
+      left: 41.2vw;
+      top: 13vw;
+      border-radius: 1vw;
+      background-image: radial-gradient(
+        farthest-corner at 40px 40px,
+        #0c101a 0%,
+        #0c101a 13%,
+        #0c101a 32%,
+        #0c115e 100%
+      );
+      // background-color: #2f2f2f;
+      box-shadow: 0vw 0vw 1vw 0.21vw;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+    }
+  }
+
+  .raise-btn {
+    position: absolute;
+    left: 22vw;
+    top: 43vw;
+    width: 10vw;
+    z-index: 1;
+  }
+  .raise-btn:hover {
+    cursor: pointer;
+  }
+
+  .call-btn {
+    position: absolute;
+    left: 11vw;
+    top: 43vw;
+    width: 10vw;
+    z-index: 1;
+  }
+
+  .call-btn-real {
+    position: absolute;
+    left: 11vw;
+    top: $bottom-btn-group-pos-top;
+    width: 9vw;
+    height: 2.8vw;
+    z-index: 1;
+    background: linear-gradient(278.34deg, #f50ed0 0.68%, #b4b4b4 124.29%);
+    border-radius: 100vw;
+    outline-width: 0.51vw;
+    outline-style: solid;
+    outline-color: rgba(100, 100, 100, 0.5);
+    color: white;
+    font-weight: 700;
+    font-size: 1.4vw;
+  }
+
+  .raise-btn-real {
+    position: absolute;
+    left: 22vw;
+    top: $bottom-btn-group-pos-top;
+    width: 9vw;
+    height: 2.8vw;
+    z-index: 1;
+    background: linear-gradient(278.34deg, #0e6bf5 0.68%, #b4b4b4 124.29%);
+    border-radius: 100vw;
+    outline-width: 0.51vw;
+    outline-style: solid;
+    outline-color: rgba(100, 100, 100, 0.5);
+    color: white;
+    font-weight: 700;
+    font-size: 1.4vw;
+  }
+
+  .fold-btn-real {
+    position: absolute;
+    left: 58vw;
+    top: $bottom-btn-group-pos-top;
+    width: 9vw;
+    height: 2.8vw;
+    z-index: 1;
+    background: linear-gradient(276.17deg, #69d643 -2.88%, #4ca9ff 115.83%);
+    border-radius: 100vw;
+    outline-width: 0.51vw;
+    outline-style: solid;
+    outline-color: rgba(100, 100, 100, 0.5);
+    color: white;
+    font-weight: 700;
+    font-size: 1.4vw;
+  }
+
+  .check-btn-real {
+    position: absolute;
+    left: 70vw;
+    top: $bottom-btn-group-pos-top;
+    width: 9vw;
+    height: 2.8vw;
+    z-index: 1;
+    background: linear-gradient(276.17deg, #69d643 -2.88%, #4ca9ff 115.83%);
+    border-radius: 100vw;
+    outline-width: 0.51vw;
+    outline-style: solid;
+    outline-color: rgba(100, 100, 100, 0.5);
+    color: white;
+    font-weight: 700;
+    font-size: 1.4vw;
+  }
+
+  .fold-btn {
+    position: absolute;
+    left: 58vw;
+    top: 43vw;
+    width: 10vw;
+    z-index: 1;
+
+    // text style
+  }
+  .fold-btn:hover {
+    cursor: pointer;
+  }
+
+  .check-btn {
+    position: absolute;
+    left: 69vw;
+    top: 43vw;
+    width: 10vw;
+    z-index: 1;
+  }
+  .check-btn:hover {
+    cursor: pointer;
+  }
+  .board {
+    .text-total-pot {
+      position: absolute;
+      left: 37vw;
+      top: 12vw;
+      width: 17vw;
+      font-size: 1.5vw;
+      font-weight: 400;
+      color: white;
+      opacity: 90%;
+      z-index: 1;
+    }
+    .back {
+      display: block;
+      position: absolute;
+      top: 18vw;
+      width: $board_card_size;
+      height: 9.5vw;
+      opacity: 0;
+
+      animation-iteration-count: 1;
+    }
+    .first.back {
+      animation: flop-open-left-1 0.6s;
+    }
+    .second.back {
+      animation: flop-open-left-2 0.8s;
+    }
+    .third.back {
+      animation: flop-open-left-3 1s;
+    }
+    .fourth.back,
+    .fifth.back {
+      animation: flop-open 0.6s;
+    }
+    @keyframes flop-open {
+      0% {
+        top: 10vw;
+        opacity: 0;
+        transform: rotateY(0deg);
+      }
+      50% {
+        top: 18vw;
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+      95% {
+        top: 18vw;
+        opacity: 1;
+      }
+      100% {
+        top: 18vw;
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+    }
+    @keyframes flop-open-left-1 {
+      0% {
+        // top: 10vw;
+        left: 10vw;
+        opacity: 0;
+        transform: rotateY(0deg);
+      }
+      50% {
+        left: 25vw;
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+      95% {
+        // top: 18vw;
+        opacity: 1;
+      }
+      100% {
+        // top: 18vw;
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+    }
+    @keyframes flop-open-left-2 {
+      0% {
+        // top: 10vw;
+        left: 10vw;
+        opacity: 0;
+        transform: rotateY(0deg);
+      }
+      50% {
+        left: 33vw;
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+      95% {
+        // top: 18vw;
+        opacity: 1;
+      }
+      100% {
+        // top: 18vw;
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+    }
+    @keyframes flop-open-left-3 {
+      0% {
+        // top: 10vw;
+        left: 10vw;
+        opacity: 0;
+        transform: rotateY(0deg);
+      }
+      50% {
+        left: 41vw;
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+      95% {
+        // top: 18vw;
+        opacity: 1;
+      }
+      100% {
+        // top: 18vw;
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+    }
+
+    .front {
+      display: block;
+      position: absolute;
+      top: 18vw;
+      width: $board_card_size;
+      height: 9.5vw;
+
+      animation-iteration-count: 1;
+    }
+    .first.front,
+    .fourth.front,
+    .fifth.front {
+      animation: open 0.9s;
+    }
+    .second.front {
+      animation: open 1.1s;
+    }
+    .third.front {
+      animation: open 1.3s;
+    }
+    @keyframes open {
+      0% {
+        top: 18vw;
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+      66% {
+        opacity: 0;
+        transform: rotateY(90deg);
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+    }
+    .first {
+      left: 25vw;
+    }
+    .second {
+      left: 33vw;
+    }
+    .third {
+      left: 41vw;
+      fill: 60%;
+    }
+    .fourth {
+      left: 49vw;
+    }
+    .fifth {
+      left: 57vw;
+    }
+  }
+  .btn-msg {
+    position: absolute;
+    top: 1.5vw;
+    left: 95vw;
+    width: 4vw;
+  }
+  .btn-msg:hover {
+    cursor: pointer;
+  }
+
+  .slider {
+    position: absolute;
+    top: 10vw;
+    left: 80vw;
+    max-width: 10vw;
+    margin: auto;
+    height: 10vw;
+  }
+
+  .slider-img {
+    position: absolute;
+    top: 8.104166666vw;
+    right: 1.56927083333333vw;
+    height: 38.38541666666vw;
+    width: 5.9375vw;
+    margin: 0;
+    padding: -32px;
+    background: url("../../assets/img/slider-except-button.png") no-repeat center;
+    background-size: cover;
+  }
+
+  .dealer-btn {
+    position: absolute;
+    left: 72vw;
+    top: 27vw;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100vw;
+    border-color: white;
+    border-width: 0.11vw;
+    color: white;
+    font-size: 1.1vw;
+    transition: all 1s;
+  }
+  .dealer-btn.firstpos{
+    left: 52vw;
+    top: 28vw;
+  }
+  .dealer-btn.secondpos {
+    left: 16vw;
+    top: 27vw;
+  }
+  .dealer-btn.thirdpos {
+    left: 19vw;
+    top: 14vw;
+  }
+  .dealer-btn.fifthpos {
+    left: 69vw;
+    top: 17vw;
+  }
+  .dealer-btn.sixthpos {
+    left: 71vw;
+    top: 27vw;
+  }
+
+  .main.progress-circle {
+    position: absolute;
+    top: 47vw;
+    left: 40vw;
+  }
+  .progress-circle {
+    width: 9vw;
+    border-radius: 100vw;
+    height: 0.7vw;
+  }
+}

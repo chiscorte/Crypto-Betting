@@ -1,0 +1,79 @@
+.landing-page {
+  /* urbanist-regular - latin */
+  // @font-face {
+  //   font-family: "Urbanist";
+  //   font-style: normal;
+  //   font-weight: 400;
+  //   src: url("https://fonts.googleapis.com/css?family=Urbanist"); /* IE9 Compat Modes */
+  // }
+  @import url("https://fonts.googleapis.com/css?family=Urbanist");
+  background: url("../../../public/img/total-bg.png") no-repeat center;
+  background-size: cover;
+
+  .side-bar {
+    background-color: rgba($color: lightgray, $alpha: 0.1);
+  }
+
+  .sidebar-container {
+    padding-left: 10px;
+    .side-bar {
+      padding: 10px;
+      width: 100%;
+      color: white;
+
+      .title {
+        // font-family: "Alegreya Sans SC";
+        font-style: italic;
+        font-weight: 800;
+        font-size: 34px;
+        line-height: 41px;
+        /* identical to box height */
+
+        text-align: center;
+
+        color: #ffffff;
+      }
+
+      .menu {
+        $active-color: #ff7223;
+        // margin-left: 2px;
+
+        .item {
+          cursor: pointer;
+          border-left: 6px solid transparent;
+          border-radius: 6px;
+          width: 60% !important;
+          // font-family: "Urbanist" !important;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+
+          color: #9a9baa;
+        }
+        .item:hover {
+          border-left: 6px solid;
+          border-image-slice: 1;
+          border-image-source: linear-gradient(180deg, #ff7223 0%, #ffcd4c 100%);
+          border-radius: 6px;
+          border-color: $active-color;
+          color: $active-color;
+        }
+      }
+    }
+  }
+
+  .main-board {
+    // padding-left: 3vw;
+    padding-right: 3vw;
+
+    .flex-img {
+      width: 100%;
+    }
+  }
+
+  .foot-bar-img {
+    width: 100vw;
+  }
+}

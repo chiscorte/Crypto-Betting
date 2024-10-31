@@ -1,0 +1,67 @@
+.cash-page {
+  min-height: 100vh;
+  background: url("../../assets/img/total-bg.png") no-repeat center;
+  background-size: cover;
+  background-position: top;
+  color: white;
+
+  .top-title {
+    .title {
+      font-size: x-large;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+  }
+
+  .title-bar {
+    .badge {
+      cursor: pointer;
+      padding: 4px 18px;
+      border-radius: 100vw;
+      border-width: 5px;
+      border-color: rgba(254, 255, 255, 0.6);
+      font-weight: 700;
+    }
+
+    .title {
+      font-weight: 900;
+      font-size: x-large;
+      opacity: 0.7;
+      text-shadow: black 4px 5px 4px;
+    }
+  }
+
+  .list-container {
+    padding-top: 52px !important;
+    padding-left: 46px !important;
+
+    .title-bar {
+      .title {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 9px;
+        backdrop-filter: blur(4.5px);
+        padding: 6px;
+        font-size: x-large;
+        font-weight: 700;
+        text-shadow: black 4px 5px 4px;
+      }
+    }
+    .list {
+      .row:hover {
+        backdrop-filter: blur(4.5px);
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .row {
+        cursor: pointer;
+
+        .list-item {
+          padding: 6px;
+          border-radius: 12px;
+          background-color: rgba(235, 241, 255, 0.4);
+          backdrop-filter: blur(26.5px);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

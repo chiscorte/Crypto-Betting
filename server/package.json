@@ -1,0 +1,36 @@
+{
+  "name": "casino_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@truffle/hdwallet-provider": "^2.1.0",
+    "axios": "^1.7.7",
+    "bitcoin-fee-estimator": "^1.0.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "crypto-convert": "^2.1.3",
+    "dotenv": "^16.0.2",
+    "eth-gasprice-estimator": "^1.0.0",
+    "ethereumjs-wallet": "^1.0.2",
+    "ethers": "^5.7.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.10.0",
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.20",
+    "poker-evaluator": "^2.0.5",
+    "pokersolver": "^2.1.4",
+    "request": "^2.88.2",
+    "send-crypto": "^0.2.38",
+    "socket.io": "^4.5.2",
+    "sqlite3": "^5.1.7",
+    "web3": "^1.8.0"
+  }
+}
