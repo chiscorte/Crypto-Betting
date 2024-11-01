@@ -29,8 +29,9 @@ app.use((req, res, next) => {
   return next();
 });
 
-server.listen(process.env.PORT || 5000, () => {
-  console.log(`server is running on port ${process.env.PORT}`);
+const port = 9239;
+server.listen(process.env.PORT || 9239, () => {
+  console.log(`server is running on port ${port}`);
 });
 
 /////////////// scheduling ////////////////
